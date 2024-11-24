@@ -1,7 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        CPUUsageMetric cpuUsageMetric = new CPUUsageMetric();
+        MetricPublisher metricPublisher = new MetricPublisher();
+        IMetric cpuUsageMetric = new CPUUsageMetric(metricPublisher);
 
         CPUUsageLogger cpuUsageLogger = new CPUUsageLogger();
         CPUUsageNotifier cpuUsageNotifier = new CPUUsageNotifier();
