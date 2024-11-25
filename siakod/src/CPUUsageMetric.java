@@ -3,8 +3,8 @@ class CPUUsageMetric implements IMetric, IEventEmitter {
 
     private int cpuUsage;
 
-    public CPUUsageMetric(MetricPublisher publisher) {
-        this.publisher = publisher;
+    public CPUUsageMetric() {
+        this.publisher = new MetricPublisher();
     }
 
     public void update(int cpuUsage) {
